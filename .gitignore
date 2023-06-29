@@ -1,0 +1,49 @@
+# Compiled output
+/build/
+/dist/
+/out/
+/.next/
+
+# Dependency directories
+/node_modules/
+/.pnp/
+.pnp.js
+
+# IDE files
+/.idea/
+/.vscode/
+*.sln
+*.suo
+*.user
+*.userprefs
+*.log
+*.pid
+*.npmrc
+yarn.lock
+
+# ASP.NET specific
+/.vs/
+/obj/
+/bin/
+
+# GraphQL
+/.graphqlconfig.yml
+/.graphqlconfig.json
+/.graphqlconfig
+
+# Miscellaneous
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build system files
+.npm/
+.npmrc
+yarn.lock
+
+# Editor files
+*~
+.*.swp
+.DS_Store
