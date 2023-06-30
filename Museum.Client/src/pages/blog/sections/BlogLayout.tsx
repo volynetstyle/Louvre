@@ -5,8 +5,8 @@ function BlogLayout(props: IBlogLayout) {
   const { children } = props;
 
   return (
-    <div className="container">
-      <div className="blog-posts-area section-gap pt-1">
+    <div className="container-fluid">
+      <div className="blog-posts-area section-gap pt-5">
         <div className="row">
           {children}
         </div>

@@ -2,25 +2,9 @@ import React, { useCallback, useState } from "react";
 import { Tree, TreeItem, TreeItemLayout } from "@fluentui/react-components/unstable";
 import { ToggleButton } from "@fluentui/react-components";
 import { CheckboxUnchecked24Regular, CheckboxIndeterminate24Regular, PanelLeftContract20Regular } from "@fluentui/react-icons";
+import { ICheckedButtons, ITreeItemProps, FiltersTreeProps } from "../types/IFiltersTree";
 
-interface Filters {
-  [category: string]: {
-    [name: string]: number | null;
-  };
-}
-
-interface CheckedButtons {
-  [key: string]: boolean;
-}
-
-interface TreeItemProps {
-  name: string;
-  count: number | null;
-  isChecked: boolean;
-  onClick: () => void;
-}
-
-const CustomTreeItem: React.FC<TreeItemProps> = ({ name, count, isChecked, onClick }) => (
+const CustomTreeItem: React.FC<ITreeItemProps> = ({ name, count, isChecked, onClick }) => (
   <TreeItem itemType="leaf">
     <TreeItemLayout style={{ paddingLeft: 23 }}>
       <ToggleButton
@@ -34,13 +18,9 @@ const CustomTreeItem: React.FC<TreeItemProps> = ({ name, count, isChecked, onCli
   </TreeItem>
 );
 
-interface FiltersTreeProps {
-  filters: Filters;
-}
-
 const FiltersTree: React.FC<FiltersTreeProps> = ({ filters }) => {
-  const [checkedButtons, setCheckedButtons] = useState<CheckedButtons>({});
-
+  const [checkedButtons, setCheckedButtons] = useState<ICheckedButtons>({});
+  
   const toggleChecked = useCallback((category: string, name: string) => {
     setCheckedButtons((prevState) => ({
       ...prevState, [`${category}-${name}`]: !prevState[`${category}-${name}`]

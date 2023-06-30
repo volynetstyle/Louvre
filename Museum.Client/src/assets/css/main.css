@@ -120,6 +120,21 @@ a, a:focus, a:hover {
   height: 722px;
 }
 
+/* Важно, чтобы родительский контейнер имел фиксированную высоту */
+.para-container {
+  height: 4em; /* Высота контейнера для 4 строк текста */
+  overflow: hidden;
+}
+
+.para-content {
+  /* Задаем нужное количество строк */
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Число строк */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 h1, h2, h3,
 h4, h5, h6 {
   font-family: "Poppins", sans-serif;

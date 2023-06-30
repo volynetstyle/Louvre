@@ -1,20 +1,22 @@
-import React, { ReactNode } from "react";
-import { Accordion } from "@fluentui/react-components";
-import { RocketRegular } from "@fluentui/react-icons";
+import { SearchBox } from '@fluentui/react/lib/SearchBox';
+import { Stack, IStackTokens} from '@fluentui/react/lib/Stack';
 
-import SinglePost from "../../modules/blog/single-post";
+import SinglePost from "./sections/SinglePost";
 import GeneralBanner from "../../components/banner/banner";
 import BlogLayout from "./sections/BlogLayout";
 import BlogSidebar from "./sections/BlogSidebar";
 import BlogMainContent from "./sections/BlogMainContent";
 import FiltersTree from "./sections/FiltersTree";
+import { IPostData } from "../../types/interfaces/IPostData";
 
-const post = {
+const post: IPostData = {
   image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/1200px-Louvre_Museum_Wikimedia_Commons.jpg",
   tags: ["Art ", "Technology ", "Fashion "],
+  date: "21.03.2023",
   title: "Cartridge Is Better Than Ever",
   content: "Everyone who is new to React is confused by React props, because they are never mentioned in any other framework, and rarely explained on their own. They are one of the early things you will learn in React after grasping React's JSX syntax. Essentially React component props are used to pass data from component to component. In this tutorial, I want to explain props in React in greater detail by going step by step through React props examples.",
-  likes: 4,
+  likes: 5,
+  dislikes: 1,
   comments: 6,
 };
 
@@ -68,12 +70,17 @@ const filters = {
 };
 
 function BlogPage() {
+  const stackTokens: Partial<IStackTokens> = { childrenGap: 20 };
+
   return (
     <div>
       <GeneralBanner />
       <BlogLayout>
-        <BlogSidebar>  
-          <FiltersTree filters={filters}/>
+        <BlogSidebar>
+          <Stack tokens={stackTokens}>
+            <SearchBox placeholder="Search" onSearch={newValue => console.log('value is ' + newValue)}/>
+          </Stack>
+          <FiltersTree filters={filters} />
         </BlogSidebar>
         <BlogMainContent>
           <SinglePost postData={post} />
