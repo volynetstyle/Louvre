@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
-import { IBlogSidebar } from "../../../types/interfaces/IBlogSidebar";
+import { IChildrenNode } from "../../../types/interfaces";
 
-function BlogSidebar(props: IBlogSidebar) {
+function BlogSidebar(props: IChildrenNode) {
     const { children } = props;
 
     return (
@@ -12,4 +12,3 @@ function BlogSidebar(props: IBlogSidebar) {
 }
 
 export default BlogSidebar;
-export { }

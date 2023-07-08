@@ -7,9 +7,8 @@ import BlogLayout from "./sections/BlogLayout";
 import BlogSidebar from "./sections/BlogSidebar";
 import BlogMainContent from "./sections/BlogMainContent";
 import FiltersTree from "./sections/FiltersTree";
-import { IPostData } from "../../types/interfaces/IPostData";
 
-const post: IPostData = {
+const post = {
   image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/1200px-Louvre_Museum_Wikimedia_Commons.jpg",
   tags: ["Art ", "Technology ", "Fashion "],
   date: "21.03.2023",

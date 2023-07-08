@@ -1,7 +1,7 @@
-import { routerType } from './../types/routerType'
-import {HomePage, BlogPage} from './index'
+import { IRouterType } from '../types/interfaces'
+import { HomePage, BlogPage } from '../pages'
 
-const pagesData: routerType[] = [
+const pagesData: IRouterType[] = [
     {
         path: "/",
         element: <HomePage />,

@@ -1,7 +1,7 @@
 import React from "react";
-import { IBlogLayout } from "../../../types/interfaces/IBlogLayout";
+import { IChildrenNode } from "../../../types/interfaces";
 
-function BlogLayout(props: IBlogLayout) {
+function BlogLayout(props: IChildrenNode) {
   const { children } = props;
 
   return (
@@ -16,4 +16,3 @@ function BlogLayout(props: IBlogLayout) {
 }
 
 export default BlogLayout;
-export { }

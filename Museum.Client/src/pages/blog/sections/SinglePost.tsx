@@ -1,5 +1,15 @@
-import { IPostData } from "../../../types/interfaces/IPostData";
 import Appearance from "./Appearance";
+
+interface IPostData {
+  image: string;
+  tags: string[];
+  date: string;
+  title: string;
+  content: string;
+  likes: number;
+  dislikes: number;
+  comments: number;
+}
 
 function limitTextByWords(text: string, maxWords: number): string {
   return text
@@ -23,9 +33,9 @@ function SinglePost({ postData }: { postData: IPostData }) {
       </div>
       <div className="pt-10">
         <div className="meta-bottom d-flex justify-content-between">
-          
-            <Appearance />
-          
+
+          <Appearance />
+
           <a href="#"><span className="lnr lnr-bubble"></span> {postData.comments} Comments</a>
         </div>
       </div>

@@ -1,12 +1,19 @@
 import React from 'react';
-import { ILogo } from '../../types/interfaces/ILogo';
+
+export interface ILogo {
+  src: string;
+  alt: string;
+  title: string;
+  href: string;
+}
 
 function Logo(props: ILogo) {
+  const logoSize = 40;
   const { src, alt, title, href } = props;
   return (
     <div id="logo">
         <a href={href}>
-            <img src={src} alt={alt} title={title} />
+            <img width={logoSize} height={logoSize} src={src} alt={alt} title={title} />
         </a>
     </div>
   );

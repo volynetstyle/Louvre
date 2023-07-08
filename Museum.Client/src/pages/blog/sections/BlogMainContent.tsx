@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
-import { IBlogMain } from "../../../types/interfaces/IBlogMain";
+import { IChildrenNode } from "../../../types/interfaces";
 
-function BlogMainContent(props: IBlogMain) {
+function BlogMainContent(props: IChildrenNode) {
     const { children } = props;
 
     return (
@@ -14,4 +14,3 @@ function BlogMainContent(props: IBlogMain) {
 }
 
 export default BlogMainContent;
-export { }

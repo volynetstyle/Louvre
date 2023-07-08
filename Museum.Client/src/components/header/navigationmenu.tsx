@@ -1,5 +1,8 @@
 import React from "react";
-import { INavigationMenu } from "../../types/interfaces/INavigationMenu";
+
+interface INavigationMenu {
+
+}
 
 const NavigationMenu: React.FC<INavigationMenu> = (props) => {
   return (

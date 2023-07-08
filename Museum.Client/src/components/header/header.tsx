@@ -10,7 +10,10 @@ function Header() {
             <hr />
             <div className="container header-top">
                 <div className="row align-items-center justify-content-between d-flex">
-                    <Logo src="./../../assets/img/logo.png" alt="Logo" title="Website Logo" href="index.html" />
+                    <Logo src="https://cdn-icons-png.flaticon.com/512/3199/3199923.png"
+                        alt="Logo"
+                        title="Website Logo"
+                        href="/" />
                     <NavigationMenu />
                 </div>
             </div>
