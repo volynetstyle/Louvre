@@ -23,9 +23,9 @@ function SinglePost({ postData }: { postData: IPostData }) {
       </div>
       <div className="pt-10">
         <div className="meta-bottom d-flex justify-content-between">
-          <p>
+          
             <Appearance />
-          </p>
+          
           <a href="#"><span className="lnr lnr-bubble"></span> {postData.comments} Comments</a>
         </div>
       </div>

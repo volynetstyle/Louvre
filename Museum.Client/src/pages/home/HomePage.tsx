@@ -1,6 +1,5 @@
 import React from "react";
 import HomeBanner from "./sections/banner";
-import ServiceArea from "./sections/ServiceArea";
 
 const ServiceContent =
     [
@@ -31,7 +30,6 @@ function HomePage() {
     return (
         <div>
             <HomeBanner />
-            <ServiceArea services={ServiceContent} />
         </div>
     );
 }
