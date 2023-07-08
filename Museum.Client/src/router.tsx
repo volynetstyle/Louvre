@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import { IRouterType } from './types/interfaces';
 import pagesData from './constants/pagesData';
-import Layout from './components/layout/layout';
+import Layout from './components/layout';
 import { Error } from './pages';
 
 const Router = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import HomeBanner from "./sections/banner";
+import { HomeBanner } from "./sections";
 
 const ServiceContent =
     [
@@ -33,6 +33,5 @@ function HomePage() {
         </div>
     );
 }
-
 
 export default HomePage;

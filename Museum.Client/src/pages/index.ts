@@ -1,5 +1,6 @@
-import HomePage from "./home/home-page";
-import BlogPage from "./blog/blog-page";
-import Error from "./error/error";
+import HomePage from "./home";
+import BlogPage from "./blog";
+import Error from "./error";
+import GalleryPage from "./gallery";
 
-export {HomePage, BlogPage, Error};
+export { HomePage, BlogPage, Error, GalleryPage };

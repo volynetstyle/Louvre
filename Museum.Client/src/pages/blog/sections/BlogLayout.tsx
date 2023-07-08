@@ -1,7 +1,7 @@
 import React from "react";
 import { IChildrenNode } from "../../../types/interfaces";
 
-function BlogLayout(props: IChildrenNode) {
+const BlogLayout = (props: IChildrenNode) => {
   const { children } = props;
 
   return (

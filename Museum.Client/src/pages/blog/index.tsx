@@ -1,12 +1,8 @@
 import { SearchBox } from '@fluentui/react/lib/SearchBox';
-import { Stack, IStackTokens} from '@fluentui/react/lib/Stack';
+import { Stack, IStackTokens } from '@fluentui/react/lib/Stack';
+import { GeneralBanner } from '../../components';
+import { BlogLayout, BlogSidebar, FiltersTree, BlogMainContent, SinglePost } from './sections';
 
-import SinglePost from "./sections/SinglePost";
-import GeneralBanner from "../../components/banner/banner";
-import BlogLayout from "./sections/BlogLayout";
-import BlogSidebar from "./sections/BlogSidebar";
-import BlogMainContent from "./sections/BlogMainContent";
-import FiltersTree from "./sections/FiltersTree";
 
 const post = {
   image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/1200px-Louvre_Museum_Wikimedia_Commons.jpg",
@@ -77,7 +73,7 @@ function BlogPage() {
       <BlogLayout>
         <BlogSidebar>
           <Stack tokens={stackTokens}>
-            <SearchBox placeholder="Search" onSearch={newValue => console.log('value is ' + newValue)}/>
+            <SearchBox placeholder="Search" onSearch={newValue => console.log('value is ' + newValue)} />
           </Stack>
           <FiltersTree filters={filters} />
         </BlogSidebar>
