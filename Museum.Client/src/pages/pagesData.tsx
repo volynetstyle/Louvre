@@ -1,6 +1,5 @@
 import { routerType } from './../types/routerType'
-import BlogPage from './blog/blog-page';
-import HomePage from './home/home-page';
+import {HomePage, BlogPage} from './index'
 
 const pagesData: routerType[] = [
     {
